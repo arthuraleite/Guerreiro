@@ -5,9 +5,11 @@ class Guerreiro
 {
 public:
 	Guerreiro();
-	void criandoGuerreiro();
-	string getNome( string );
-	void mostrarNome();
+	void criarGuerreiro(){
+		cout << "Bem vindo ao Medieval Game!";
+	}
+	string getNome(string);
+	void mostrarGuerreiro();
 	
 
 };
