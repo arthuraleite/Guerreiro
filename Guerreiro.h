@@ -5,8 +5,16 @@ class Guerreiro
 {
 public:
 	Guerreiro();
-	~Guerreiro();
+	void criandoGuerreiro();
+	string getNome( string );
+	void mostrarNome();
+	
 
 };
 
+private:
+	string nomeGuerreiro;
+	int atackPower;
+	int velocidade;
+};
 #endif // GUERREIRO_H
