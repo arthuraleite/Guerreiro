@@ -5,22 +5,22 @@
 ## Debug
 ProjectName            :=Guerreiro
 ConfigurationName      :=Debug
-WorkspacePath          :=C:/UFPA/Prog/MedievalGame
-ProjectPath            :=C:/UFPA/Prog/MedievalGame/Guerreiro
+WorkspacePath          :=C:/Users/aluno/Documents/MedievalGame
+ProjectPath            :=C:/Users/aluno/Documents/MedievalGame/Guerreiro
 IntermediateDirectory  :=./Debug
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
-User                   :=Arthur Leite
-Date                   :=01/04/2019
+User                   :=aluno
+Date                   :=08/04/2019
 CodeLitePath           :="C:/Program Files/CodeLite"
-LinkerName             :=g++
-SharedObjectLinkerName :=g++ -shared -fPIC
+LinkerName             :="C:/Program Files (x86)/CodeBlocks/MinGW/bin/g++.exe"
+SharedObjectLinkerName :="C:/Program Files (x86)/CodeBlocks/MinGW/bin/g++.exe" -shared -fPIC
 ObjectSuffix           :=.o
 DependSuffix           :=.o.d
-PreprocessSuffix       :=.o.i
-DebugSwitch            :=-gstab
+PreprocessSuffix       :=.i
+DebugSwitch            :=-g 
 IncludeSwitch          :=-I
 LibrarySwitch          :=-l
 OutputSwitch           :=-o 
@@ -31,12 +31,12 @@ OutputFile             :=$(IntermediateDirectory)/$(ProjectName)
 Preprocessors          :=
 ObjectSwitch           :=-o 
 ArchiveOutputSwitch    := 
-PreprocessOnlySwitch   :=-E 
+PreprocessOnlySwitch   :=-E
 ObjectsFileList        :="Guerreiro.txt"
 PCHCompileFlags        :=
 MakeDirCommand         :=makedir
 RcCmpOptions           := 
-RcCompilerName         :=windres
+RcCompilerName         :="C:/Program Files (x86)/CodeBlocks/MinGW/bin/windres.exe"
 LinkOptions            :=  
 IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch). 
 IncludePCH             := 
@@ -49,13 +49,13 @@ LibPath                := $(LibraryPathSwitch).
 ## Common variables
 ## AR, CXX, CC, AS, CXXFLAGS and CFLAGS can be overriden using an environment variables
 ##
-AR       := ar rcus
-CXX      := g++
-CC       := gcc
+AR       := "C:/Program Files (x86)/CodeBlocks/MinGW/bin/ar.exe" rcu
+CXX      := "C:/Program Files (x86)/CodeBlocks/MinGW/bin/g++.exe"
+CC       := "C:/Program Files (x86)/CodeBlocks/MinGW/bin/gcc.exe"
 CXXFLAGS :=  -g -O0 -Wall $(Preprocessors)
 CFLAGS   :=  -g -O0 -Wall $(Preprocessors)
 ASFLAGS  := 
-AS       := as
+AS       := "C:/Program Files (x86)/CodeBlocks/MinGW/bin/as.exe"
 
 
 ##
@@ -94,20 +94,20 @@ PreBuild:
 ## Objects
 ##
 $(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp $(IntermediateDirectory)/main.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/UFPA/Prog/MedievalGame/Guerreiro/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/aluno/Documents/MedievalGame/Guerreiro/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main.cpp$(DependSuffix): main.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/main.cpp$(DependSuffix) -MM main.cpp
 
 $(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix)main.cpp
 
 $(IntermediateDirectory)/Guerreiro.cpp$(ObjectSuffix): Guerreiro.cpp $(IntermediateDirectory)/Guerreiro.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/UFPA/Prog/MedievalGame/Guerreiro/Guerreiro.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Guerreiro.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/aluno/Documents/MedievalGame/Guerreiro/Guerreiro.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Guerreiro.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Guerreiro.cpp$(DependSuffix): Guerreiro.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Guerreiro.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Guerreiro.cpp$(DependSuffix) -MM Guerreiro.cpp
 
 $(IntermediateDirectory)/Guerreiro.cpp$(PreprocessSuffix): Guerreiro.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Guerreiro.cpp$(PreprocessSuffix) Guerreiro.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Guerreiro.cpp$(PreprocessSuffix)Guerreiro.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
