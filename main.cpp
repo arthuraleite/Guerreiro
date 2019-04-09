@@ -1,12 +1,19 @@
 #include <iostream>
-#include <Guerreiro/Guerreiro.h>
+#include <string>
+#include "Guerreiro.h"
+
+using std::string;
 using std::cout;
-using std::endl;
+using std::cin;
 
 int main(int argc, char **argv)
 {
-	Guerreiro meuGuerreiro;
-	meuGuerreiro.criarGuerreiro();
+    Guerreiro warrior;
 	
-	return 0;
+	cout<<"Deseja ler as regras? \n(Digite 'S' para sim ou 'N' para nao): ";
+	string mostrarRegras;
+	cin>> mostrarRegras;
+	
+	criarGuerreiroAntagonista(warrior);
+	Guerreiro::apresentarRegras(mostrarRegras);
 }

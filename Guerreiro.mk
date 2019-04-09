@@ -5,15 +5,15 @@
 ## Debug
 ProjectName            :=Guerreiro
 ConfigurationName      :=Debug
-WorkspacePath          :=C:/UFPA/Prog/MedievalGame
-ProjectPath            :=C:/UFPA/Prog/MedievalGame/Guerreiro
+WorkspacePath          :=C:/MedievalGame
+ProjectPath            :=C:/MedievalGame/Guerreiro
 IntermediateDirectory  :=./Debug
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Arthur Leite
-Date                   :=01/04/2019
+Date                   :=10/04/2019
 CodeLitePath           :="C:/Program Files/CodeLite"
 LinkerName             :=g++
 SharedObjectLinkerName :=g++ -shared -fPIC
@@ -62,7 +62,8 @@ AS       := as
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/Guerreiro.cpp$(ObjectSuffix) 
+UNIT_TEST_PP_SRC_DIR:=C:\UnitTest++-1.3
+Objects0=$(IntermediateDirectory)/Guerreiro.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) 
 
 
 
@@ -93,21 +94,21 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp $(IntermediateDirectory)/main.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/UFPA/Prog/MedievalGame/Guerreiro/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/main.cpp$(DependSuffix): main.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/main.cpp$(DependSuffix) -MM main.cpp
-
-$(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
-
 $(IntermediateDirectory)/Guerreiro.cpp$(ObjectSuffix): Guerreiro.cpp $(IntermediateDirectory)/Guerreiro.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/UFPA/Prog/MedievalGame/Guerreiro/Guerreiro.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Guerreiro.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/MedievalGame/Guerreiro/Guerreiro.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Guerreiro.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Guerreiro.cpp$(DependSuffix): Guerreiro.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Guerreiro.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Guerreiro.cpp$(DependSuffix) -MM Guerreiro.cpp
 
 $(IntermediateDirectory)/Guerreiro.cpp$(PreprocessSuffix): Guerreiro.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Guerreiro.cpp$(PreprocessSuffix) Guerreiro.cpp
+
+$(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp $(IntermediateDirectory)/main.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/MedievalGame/Guerreiro/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/main.cpp$(DependSuffix): main.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/main.cpp$(DependSuffix) -MM main.cpp
+
+$(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
