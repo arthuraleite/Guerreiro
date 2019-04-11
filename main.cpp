@@ -9,11 +9,29 @@ using std::cin;
 int main(int argc, char **argv)
 {
     Guerreiro warrior;
+	Guerreiro::prepararMapa();
 	
-	cout<<"Deseja ler as regras? \n(Digite 'S' para sim ou 'N' para nao): ";
+	cout<<"Você deseja ler as regras? \n(Digite 'S' para sim ou 'N' para nao): ";
 	string mostrarRegras;
 	cin>> mostrarRegras;
 	
-	criarGuerreiroAntagonista(warrior);
-	Guerreiro::apresentarRegras(mostrarRegras);
+	warrior.apresentarRegras(mostrarRegras);
+	
+	cout<<"Você precisa se movimentar!\n";
+	
+	string direcao = "A";
+	
+	while(direcao != "V" && direcao != "H"){
+		cout<<"Digite V (para vertical) e H (para horizontal): ";
+		cin>> direcao;
+	}
+	
+	int espacoPercorrido = 0;
+	
+	cout<<"Digite agora quanto você quer percorrer: ";
+	cin>> espacoPercorrido;
+	
+	warrior.movimentarGuerreiro(direcao, espacoPercorrido);
+	
+	pause;
 }
