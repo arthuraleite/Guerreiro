@@ -14,7 +14,10 @@ class Guerreiro
         ~Guerreiro();
 		static void prepararMapa();
 		static void apresentarRegras(const string &);
+		int getQteItens();
+		int getItensArmazenados(int);
 		void movimentarGuerreiro(const string &, int);
+		void info() const;
 
     private:
         string nomeGuerreiro;
@@ -22,9 +25,14 @@ class Guerreiro
 		int poderDeAtaque;
         int velocidade;
 		int areaDoMapa;
-		static int numInimigos;
-		int InimgosposicaoX [numInimigos];
-		static string InimgosposicaoY [numInimigos];
+		int Cash;
+		int qteItens;
+		int itensArmazenados[10];
+		
+		const static int NUMINIMIGOS = 100;
+		
+		static int InimgosposicaoX[NUMINIMIGOS];
+		static string InimgosposicaoY[NUMINIMIGOS];
 		
 		int posicaoX; //Horizontal
 		string posicaoY; //Vertical 

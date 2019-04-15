@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Arthur Leite
-Date                   :=14/04/2019
+Date                   :=18/04/2019
 CodeLitePath           :="C:/Program Files/CodeLite"
 LinkerName             :=g++
 SharedObjectLinkerName :=g++ -shared -fPIC
@@ -63,7 +63,7 @@ AS       := as
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
 UNIT_TEST_PP_SRC_DIR:=C:\UnitTest++-1.3
-Objects0=$(IntermediateDirectory)/Guerreiro.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/Guerreiro.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/Armadura.cpp$(ObjectSuffix) $(IntermediateDirectory)/Itens.cpp$(ObjectSuffix) 
 
 
 
@@ -109,6 +109,22 @@ $(IntermediateDirectory)/main.cpp$(DependSuffix): main.cpp
 
 $(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
+
+$(IntermediateDirectory)/Armadura.cpp$(ObjectSuffix): Armadura.cpp $(IntermediateDirectory)/Armadura.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/MedievalGame/Guerreiro/Armadura.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Armadura.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Armadura.cpp$(DependSuffix): Armadura.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Armadura.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Armadura.cpp$(DependSuffix) -MM Armadura.cpp
+
+$(IntermediateDirectory)/Armadura.cpp$(PreprocessSuffix): Armadura.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Armadura.cpp$(PreprocessSuffix) Armadura.cpp
+
+$(IntermediateDirectory)/Itens.cpp$(ObjectSuffix): Itens.cpp $(IntermediateDirectory)/Itens.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/MedievalGame/Guerreiro/Itens.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Itens.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Itens.cpp$(DependSuffix): Itens.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Itens.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Itens.cpp$(DependSuffix) -MM Itens.cpp
+
+$(IntermediateDirectory)/Itens.cpp$(PreprocessSuffix): Itens.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Itens.cpp$(PreprocessSuffix) Itens.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
