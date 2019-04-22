@@ -34,8 +34,6 @@ void Guerreiro::apresentarRegras(const string &mostrarRegras)
 		cout<<":::::::::REGRAS:::::::::\nEscrever regras aqui\n\n";
 	}
 }
-
-/*void Guerreiro::movimentarGuerreiro(const string &direcao, int espacoPercorrido)
 {*
 	int aux = (direcao == "V") ? 1 : 2;
 	
@@ -51,12 +49,6 @@ void Guerreiro::apresentarRegras(const string &mostrarRegras)
 	
 	cout<<"A posicao de "<<Guerreiro::nomeGuerreiro<<" posicao atual e: {0},{1}", Guerreiro::posicaoY, Guerreiro::posicaoX;
 }*/
-
-void Guerreiro::prepararMapa()
-{
-	string vetorNumerico = ("A", "B", "C", "D", "E");
-	int contAux = 0;	
-}
 
 int Guerreiro::getQteItens()
 {

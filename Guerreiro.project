@@ -93,6 +93,8 @@
     </Configuration>
   </Settings>
   <VirtualDirectory Name="src">
+    <File Name="Mapa.cpp"/>
+    <File Name="Mapa.h"/>
     <File Name="Armadura.cpp"/>
     <File Name="Armadura.h"/>
     <File Name="Itens.cpp"/>

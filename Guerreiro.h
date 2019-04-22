@@ -3,40 +3,30 @@
 #include <string>
 using std::string;
 
-#include <iostream>
-#include <string>
-using std::string;
-
 class Guerreiro
 {
     public:
         Guerreiro();
         ~Guerreiro();
-		static void prepararMapa();
 		static void apresentarRegras(const string &);
 		int getQteItens();
 		int getItensArmazenados(int);
 		void movimentarGuerreiro(const string &, int);
 		void info() const;
+		inline void addVida(){ vida++; }
+		inline void addImunidade(){ ImunidadeTemporaria++; }
+		inline void addPoderDeAtaque(){ poderDeAtaque++; }
+		inline void addPoderDeDefesa(){ podeDeDefesa++; }
+		inline void addVelocidade(){ velocidade++; }
 
-    private:
-        string nomeGuerreiro;
+private:
+		string nomeGuerreiro;
         int vida;
+		int ImunidadeTemporaria;
 		int poderDeAtaque;
+		int podeDeDefesa;
         int velocidade;
-		int areaDoMapa;
-		int Cash;
-		int qteItens;
-		int itensArmazenados[10];
-		
-		const static int NUMINIMIGOS = 100;
-		
-		static int InimgosposicaoX[NUMINIMIGOS];
-		static string InimgosposicaoY[NUMINIMIGOS];
-		
 		int posicaoX; //Horizontal
-		string posicaoY; //Vertical 
-		
-		static int jogadoresAtivos;
+		string posicaoY; //Vertical
 };
 #endif // GUERREIRO_H

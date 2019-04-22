@@ -6,8 +6,10 @@ using std::string;
 using std::cout;
 
 Armadura::Armadura()
-:vida(10), duracao(3)
+:vida(2), duracao(3), rodadasPassadas(0)
 {
+	cout<<"Você encontrou uma armadura!"
+		<<"Ela lhe garante +2 de vida por 3 rodadas.";
 }
 
 void Armadura::danoRecebido(int dano)
