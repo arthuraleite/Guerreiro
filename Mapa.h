@@ -22,9 +22,9 @@ private:
 	static int NPCAtivos;
 	
 	//Itens do Jogo
-	const static int NUMNPC = 7;
-	static int ItensPosicaoX[NUMNPC];
-	static string ItensPosicaoY[NUMNPC];
+	const static int NUMITENS = 7;
+	static int ItensPosicaoX[NUMITENS];
+	static string ItensPosicaoY[NUMITENS];
 };
 
 #endif // MAPA_H

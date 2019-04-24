@@ -56,25 +56,40 @@ void Itens::adicionarItens(int itemEscolhido)
 	if(qte < maxItens)
 	{
 		itensGuerreiro[qte] = itemEscolhido;
-		cout<<"Você adicionou um(a) "
+		cout<<"Voce adicionou um(a) "
 			<<Itens[itemEscolhido];
 		
 		switch(itemEscolhido)
 		{
 			case 0:
-				Guerreiro::addVida();
+				int vida = Guerreiro::addVida();
+				cout<<"Agora você tem "
+					<<vida
+					<<" pontos de vida.";
 				break;
 			case 1:
-				Guerreiro::addImunidade();
+				int imunidade = Guerreiro::addImunidade();
+				cout<<"Agora você tem "
+					<<imunidade
+					<<" rodadas com imunidade.";
 				break;
 			case 2:
-				Guerreiro::addPoderDeAtaque();
+				int poderDeAtaque = Guerreiro::addPoderDeAtaque();
+				cout<<"Agora você tem "
+					<<poderDeAtaque
+					<<" pontos de ataque.";
 				break;
 			case 3:
-				Guerreiro::addPoderDeDefesa();
+				int poderDeDefesa = Guerreiro::addPoderDeDefesa();
+				cout<<"Agora você tem "
+					<<poderDeDefesa
+					<<" pontos de defesa.";
 				break;
 			case 4:
-				Guerreiro::addVelocidade();
+				int velocidade = Guerreiro::addVelocidade();
+				cout<<"Agora você tem "
+					<<vida
+					<<" pontos de velocidade.";
 				break;
 		}
 		

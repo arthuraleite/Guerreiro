@@ -59,6 +59,36 @@ int Guerreiro::getItensArmazenados(int posicao)
 {
 	return itensArmazenados[posicao];
 }
+
+int Guerreiro::addVida()
+{
+	vida++; 
+	return vida;
+}
+
+int Guerreiro::addImunidade()
+{ 
+	ImunidadeTemporaria++; 
+	return ImunidadeTemporaria;
+}
+
+int Guerreiro::addPoderDeAtaque()
+{
+	poderDeAtaque++; 
+	return poderDeAtaque;
+}
+
+int Guerreiro::addPoderDeDefesa()
+{ 
+	poderDeDefesa++; 
+	return poderDeDefesa;
+}
+
+int Guerreiro::addVelocidade()
+{ 
+	velocidade++; 
+	return velocidade;
+}
 Guerreiro::~Guerreiro()
 {
 }

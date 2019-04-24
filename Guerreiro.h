@@ -13,18 +13,18 @@ class Guerreiro
 		int getItensArmazenados(int);
 		void movimentarGuerreiro(const string &, int);
 		void info() const;
-		inline void addVida(){ vida++; }
-		inline void addImunidade(){ ImunidadeTemporaria++; }
-		inline void addPoderDeAtaque(){ poderDeAtaque++; }
-		inline void addPoderDeDefesa(){ podeDeDefesa++; }
-		inline void addVelocidade(){ velocidade++; }
+		int addVida();
+		int addImunidade();
+		int addPoderDeAtaque();
+		int addPoderDeDefesa();
+		int addVelocidade();
 
 private:
 		string nomeGuerreiro;
         int vida;
 		int ImunidadeTemporaria;
 		int poderDeAtaque;
-		int podeDeDefesa;
+		int poderDeDefesa;
         int velocidade;
 		int posicaoX; //Horizontal
 		string posicaoY; //Vertical
